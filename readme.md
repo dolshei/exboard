@@ -1,13 +1,8 @@
-# Readme 표준 샘플 (프로젝트 제목 작성)
+# Sample Board 
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-(프로젝트의 설명을 작성해 주세요.)
-
-김집사 README 파일의 표준 스타일
-
-README 파일은 일반적으로 코드의 첫 번째 진입점입니다. 사람들에게 모듈을 사용해야 하는 이유, 설치 방법 및 사용 방법을 알려야 합니다. README 작성 방법을 표준화하면 README를 더 쉽게 만들고 유지 관리할 수 있습니다. 훌륭한 문서에는 작업이 필요합니다!
-
+Spring Boot, JPA 를 적용한 Board 
 
 
 ## Table of Contents
