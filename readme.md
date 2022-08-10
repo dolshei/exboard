@@ -56,6 +56,8 @@ $ standard-readme-spec
 
 프로젝트 실행 및 운영에 필요한 예제가 있다면 안내.
 
+https://github.com/qkralswl689/LearnFromCode/tree/main/board2022
+
 
 ## 업데이트 사항
 

@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 
 @SpringBootTest
-public class BoardRepositoryTests {
+class BoardRepositoryTests {
 
     @Autowired
     private BoardRepository boardRepository;
@@ -40,7 +40,7 @@ public class BoardRepositoryTests {
         });
     }
 
-    // LAZY Loding 방식으로 로딩하기 때문에 Board 테이블만 가져오는것은 문제가 없지만
+    // LAZY Loading 방식으로 로딩하기 때문에 Board 테이블만 가져오는것은 문제가 없지만
     // board.getWriter() 메소드에서 문제가 발생한다. => board.getWriter()는 member 테이블을 로딩해야 하는데
     // 이미 DB 연결이 끝난 상태이므로 에러가 발생한다.
     // 해결방법 : @Transactional 어노테이션을 추가한다. => 해당 메소드를 하나의 트랜잭션으로 처리하라는 의미로
@@ -71,8 +71,8 @@ public class BoardRepositoryTests {
 
         List<Object[]> result = boardRepository.getBoardWithReply(100L);
 
-        for (Object[] arr : result) {
-            System.out.println(Arrays.toString(arr));
+        for (Object[] arr2 : result) {
+            System.out.println(Arrays.toString(arr2));
         }
     }
 
