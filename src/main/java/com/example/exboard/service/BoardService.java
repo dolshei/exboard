@@ -11,13 +11,11 @@ public interface BoardService {
     default Board dtoToEntity(BoardDTO dto) {
         Member member = Member.builder().email(dto.getWriterEmail()).build();
 
-        Board board = Board.builder()
+        return Board.builder()
                 .bno(dto.getBno())
                 .title(dto.getTitle())
                 .content(dto.getContent())
                 .writer(member)
                 .build();
-
-        return board;
     }
 }
