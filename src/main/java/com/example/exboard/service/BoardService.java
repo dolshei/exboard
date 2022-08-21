@@ -41,4 +41,7 @@ public interface BoardService {
 
     // 게시물 조회
     BoardDTO get(Long bno);
+
+    // 삭제
+    void removeWithReplies(Long bno);
 }

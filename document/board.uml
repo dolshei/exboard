@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.board</OriginalElement>
+  <nodes>
+    <node x="109.67363438018077" y="112.0">8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.reply</node>
+    <node x="-199.6596989531526" y="112.0">8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.board</node>
+    <node x="-498.99303228648586" y="123.5">8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.member</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.reply" target="8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.board" relationship="REFERENCES">
+      <point x="-75.5" y="0.0" />
+      <point x="87.5" y="0.0" />
+    </edge>
+    <edge source="8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.board" target="8ee9842e-5d32-45b0-b89f-8edb9c155e79.TABLE:exboard.member" relationship="REFERENCES">
+      <point x="-87.5" y="0.0" />
+      <point x="80.5" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="계층" zoom="1.0" showDependencies="false" x="-119.0" y="197.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>가상 외래 키</Category>
+    <Category>열</Category>
+    <Category>주석</Category>
+    <Category>키 열</Category>
+  </Categories>
+</Diagram>
+

@@ -38,9 +38,16 @@ public class BoardServiceTests {
     }
 
     @Test
-    void get() {
+    public void testGet() {
         Long bno = 100L;
         BoardDTO boardDTO = boardService.get(bno);
         System.out.println(boardDTO);
+    }
+
+    @Test
+    public void testRemove() {
+        Long bno = 11L;
+
+        boardService.removeWithReplies(bno);
     }
 }
