@@ -64,4 +64,17 @@ public class BoardServiceImpl implements BoardService {
         // 게시글 삭제
         repository.deleteById(bno);
     }
+
+    @Transactional
+    @Override
+    public void modify(BoardDTO boardDTO) {
+
+        // getOne() : 필요한 순간까지 로딩을 지연하는 방식 을 getReferenceById() 로 변환
+        Board board = repository.getReferenceById(boardDTO.getBno());
+
+        board.changeTitle(boardDTO.getTitle());
+        board.changeContent(boardDTO.getContent());
+
+        repository.save(board);
+    }
 }

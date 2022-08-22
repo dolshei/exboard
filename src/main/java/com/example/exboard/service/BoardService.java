@@ -44,4 +44,7 @@ public interface BoardService {
 
     // 삭제
     void removeWithReplies(Long bno);
+
+    // 수정
+    void modify(BoardDTO boardDTO);
 }
