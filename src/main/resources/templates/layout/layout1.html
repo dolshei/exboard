@@ -4,50 +4,50 @@
 
 <th:block th:fragment="setContent(content)">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-  </head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
 
-  <body>
+<body>
 
-  <style>
+<style>
     * {
-      margin: 0;
-      padding: 0;
+        margin: 0;
+        padding: 0;
     }
     .header {
-      width:100vw;
-      height: 20vh;
-      background-color: aqua;
+        width:100vw;
+        height: 20vh;
+        background-color: aqua;
     }
     .content {
-      width: 100vw;
-      height: 70vh;
-      background-color: lightgray;
+        width: 100vw;
+        height: 70vh;
+        background-color: lightgray;
     }
     .footer {
-      width: 100vw;
-      height: 10vh;
-      background-color: green;
+        width: 100vw;
+        height: 10vh;
+        background-color: green;
     }
-  </style>
+</style>
 
 
-  <div class="header">
+<div class="header">
     <h1>HEADER</h1>
-  </div>
-  <div class="content" >
+</div>
+<div class="content" >
 
     <th:block th:replace = "${content}">
     </th:block>
 
-  </div>
+</div>
 
-  <div class="footer">
+<div class="footer">
     <h1>FOOTER</h1>
-  </div>
+</div>
 
-  </body>
+</body>
 </th:block>
 </html>
