@@ -8,23 +8,35 @@ import com.example.exboard.entity.Member;
 
 public interface BoardService {
 
+    // 등록
     Long register(BoardDTO dto);
+
+    // 게시물 조회
+    BoardDTO get(Long bno);
+
+    // 삭제
+    void removeWithReplies(Long bno);
+
+    // 수정
+    void modify(BoardDTO boardDTO);
 
     default Board dtoToEntity(BoardDTO dto) {
         Member member = Member.builder().email(dto.getWriterEmail()).build();
 
-        return Board.builder()
+        Board board = Board.builder()
                 .bno(dto.getBno())
                 .title(dto.getTitle())
                 .content(dto.getContent())
                 .writer(member)
                 .build();
+
+        return board;
     }
 
     // 목록 처리
     PageResultDTO<BoardDTO, Object[]> getList(PageRequestDTO pageRequestDTO);
 
-    default BoardDTO entityTODTO(Board board, Member member, Long replyCount) {
+    default BoardDTO entityToDTO(Board board, Member member, Long replyCount) {
         BoardDTO boardDTO = BoardDTO.builder()
                 .bno(board.getBno())
                 .title(board.getTitle())
@@ -39,12 +51,4 @@ public interface BoardService {
         return boardDTO;
     }
 
-    // 게시물 조회
-    BoardDTO get(Long bno);
-
-    // 삭제
-    void removeWithReplies(Long bno);
-
-    // 수정
-    void modify(BoardDTO boardDTO);
 }

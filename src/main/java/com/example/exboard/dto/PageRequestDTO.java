@@ -15,8 +15,8 @@ import org.springframework.data.domain.Sort;
 @Data
 public class PageRequestDTO {
     // 목적 : JPA쪽에서 사용하는 Pageable 타입의 객체를 생성하는 것
-    // 화면에서 전달되는 page, size 라는 파라미터를 수집한다.
 
+    // 화면에서 전달되는 page, size 라는 파라미터를 수집한다.
     private int page;
     private int size;
 

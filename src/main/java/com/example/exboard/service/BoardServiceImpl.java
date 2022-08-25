@@ -21,7 +21,7 @@ import java.util.function.Function;
 public class BoardServiceImpl implements BoardService {
 
     @Autowired
-    private final BoardRepository repository;
+    private final BoardRepository repository;       // 자동주입 final
 
     @Autowired
     private final ReplyRepository replyRepository;
@@ -38,7 +38,7 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public PageResultDTO<BoardDTO, Object[]> getList(PageRequestDTO pageRequestDTO) {
 
-        Function<Object[], BoardDTO> fn = (en -> entityTODTO((Board)en[0], (Member)en[1], (Long)en[2]));
+        Function<Object[], BoardDTO> fn = (en -> entityToDTO((Board)en[0], (Member)en[1], (Long)en[2]));
 
         Page<Object[]> result = repository.getBoardWithReplyCount(pageRequestDTO.getPageable(Sort.by("bno").descending()));
 
@@ -50,7 +50,7 @@ public class BoardServiceImpl implements BoardService {
 
         Object result = repository.getBoardByBno(bno);
         Object[] arr = (Object[]) result;
-        return entityTODTO((Board)arr[0], (Member)arr[1], (Long)arr[2]);
+        return entityToDTO((Board)arr[0], (Member)arr[1], (Long)arr[2]);
     }
 
     // 삭제, 트랜잭션 추가
