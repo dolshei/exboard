@@ -10,7 +10,7 @@ Spring Boot, JPA 를 적용한 Board
 - [배경](#배경)
 - [설치](#설치)
 - [사용방법](#사용방법)
-- [예제 참조](#예제 참조)
+- [예제참조](#예제 참조)
 - [업데이트 사항](#업데이트 사항)
 - [참고 문서 또는 기술](#참고 문서 또는 기술)
 - [참여 개발자](#참여 개발자)
@@ -40,7 +40,7 @@ README를 작성하는 것은 어렵지만, 유지하고 최신화 하는 것은
 로컬 개발환경 셋팅 방법과 서버 셋팅 방법 안내
 
 ```sh
-$ npm install --global standard-readme-spec
+
 ```
 
 ## 사용방법
@@ -48,11 +48,10 @@ $ npm install --global standard-readme-spec
 프로젝트 실행 방법 및 추가 정보 작성
 
 ```sh
-$ standard-readme-spec
-# Prints out the standard-readme spec
+
 ```
 
-## 예제 참조
+## 예제참조
 
 프로젝트 실행 및 운영에 필요한 예제가 있다면 안내.
 
