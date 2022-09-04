@@ -56,6 +56,7 @@ sourceSets {
     main.java.srcDir querydslDir
 }
 
+// gradle 5.0 이상부터는 옵션을 이렇게 넣어주어야 함.
 configurations {
     compileOnly {
         extendsFrom annotationProcessor

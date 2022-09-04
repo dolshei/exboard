@@ -20,7 +20,7 @@ import java.util.stream.IntStream;
 class BoardRepositoryTests {
 
     @Autowired
-    private BoardRepository boardRepository;
+    BoardRepository boardRepository;
 
     @Test
     public void insertBoard() {
@@ -94,5 +94,10 @@ class BoardRepositoryTests {
 
         Object[] arr = (Object[]) result;
         System.out.println(Arrays.toString(arr));
+    }
+
+    @Test
+    public void testSearch1() {
+        boardRepository.search1();
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
-// 화면에서 전달되는 목록 관련된 데이터에 대한 DTO를 PageRequestDTO라는 이름으로 생성
+// 화면에서 전달되는 목록 관련된 데이터에 대한 DTO(Data Transfer Object)를 PageRequestDTO라는 이름으로 생성
 // 목록 페이지를 요청할 때 사용하는 데이터를 재사용하기 쉽게 만든다.
 // -> 파라미터를 DTO로 선언하고 나중에 재사용하는 용도
 @Builder

@@ -1,6 +1,7 @@
 package com.example.exboard.repository;
 
 import com.example.exboard.entity.Board;
+import com.example.exboard.repository.search.SearchBoardRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface BoardRepository extends JpaRepository<Board, Long> {
+public interface BoardRepository extends JpaRepository<Board, Long>, SearchBoardRepository {
 
     // Entity Class 내부에 연관관계가 있는 경우 JPQL 처리
     // 한개의 로우(object) 내에 Object[]로 나옴.
