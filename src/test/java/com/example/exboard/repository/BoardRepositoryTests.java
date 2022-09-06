@@ -2,6 +2,7 @@ package com.example.exboard.repository;
 
 import com.example.exboard.entity.Board;
 import com.example.exboard.entity.Member;
+import com.example.exboard.entity.Reply;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -107,4 +108,5 @@ class BoardRepositoryTests {
 
         Page<Object[]> result = boardRepository.searchPage("t", "1", pageable);
     }
+
 }
