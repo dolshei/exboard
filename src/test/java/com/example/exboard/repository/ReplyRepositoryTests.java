@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 @SpringBootTest
@@ -27,13 +28,18 @@ public class ReplyRepositoryTests {
 
             Board board = Board.builder().bno(bno).build();
 
-            Reply reply = Reply.builder()
-                    .text("Reply..." + i)
-                    .board(board)
-                    .replyer("guest")
-                    .build();
+            Optional<Board> result = boardRepository.findById(bno);    //DB에 존재하는 번호인지 체크
 
-            replyRepository.save(reply);
+            if ( !result.isEmpty()) {
+                Reply reply = Reply.builder()
+                        .text("Reply..." + i)
+                        .board(board)
+                        .replyer("guest")
+                        .build();
+
+                replyRepository.save(reply);
+            }
+
         });
     }
 

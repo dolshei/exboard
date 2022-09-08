@@ -13,7 +13,8 @@
                 </a>
             </span>
         </h1>
-        <form action="/board/list" method="get" id="searchForm">
+
+        <form action="/board/list" method="post" id="searchForm">
             <div class="input-group">
                 <input type="hidden" name="page" value="1">
                 <div class="input-group-prepend">
@@ -28,11 +29,12 @@
                 </div>
                 <input class="form-control" name="keyword" th:value="${pageRequestDTO.keyword}">
                 <div class="input-group-append" id="button-addon4">
-                    <button class="btn btn-outline-secondary btn-search" type="button">Search</button>
+                    <button class="btn btn-outline-secondary btn-search" type="button" onclick="onsubmit();">Search</button>
                     <button class="btn btn-outline-secondary btn-clear" type="button">Clear</button>
                 </div>
             </div>
         </form>
+
         <table class="table table-striped">
             <thead>
             <tr>
