@@ -1,7 +1,9 @@
 package com.example.exboard.repository;
 
+import com.example.exboard.dto.ReplyDTO;
 import com.example.exboard.entity.Board;
 import com.example.exboard.entity.Reply;
+import com.example.exboard.service.ReplyService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +20,9 @@ public class ReplyRepositoryTests {
 
     @Autowired
     BoardRepository boardRepository;
+
+    @Autowired
+    private ReplyService replyService;
 
     @Test
     public void insertReply() {
@@ -48,5 +53,14 @@ public class ReplyRepositoryTests {
         List<Reply> replyList = replyRepository.getRepliesByBoardOrderByRno(Board.builder().bno(88L).build());
 
         replyList.forEach(reply -> System.out.println(reply));
+    }
+
+    @Test
+    public void testGetList() {
+        Long bno = 96L;     // board Table에 존재하는 번호
+
+        List<ReplyDTO> replyDTOList = replyService.getList(bno);
+
+        replyDTOList.forEach(replyDTO -> System.out.println(replyDTO));
     }
 }
