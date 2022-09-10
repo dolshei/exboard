@@ -41,6 +41,36 @@
             <button type="button" class="btn btn-info">List</button>
         </a>
 
+        <div >
+            <div class="mt-4">
+                <h5 ><span class="badge badge-info addReply">Add Reply</span> </h5>
+                <h5 ><span class="badge badge-secondary replyCount"> Reply Count  [[${dto.replyCount}]]</span> </h5>
+            </div>
+            <div class="list-group replyList">
+
+            </div>
+        </div>
+
+        <script th:inline="javascript">
+            // Reply Count 부분을 클릭했을 때 해당 게시물의 댓글을 jquery의 getJSON()을 활용해 가져오고 이를 console.log()를 이용해 확인한다
+            $(document).ready(function() {
+
+                var bno = [[${dto.bno}]];
+
+                var listGroup  = $(".replyList");
+
+                $(".replyCount").click(function(){
+
+                    $.getJSON('/replies/board/'+bno, function(arr){
+
+                        console.log(arr);
+
+                    })//end getJSON
+
+                })//end click
+            });
+        </script>
+
     </th:block>
 
 </th:block>
