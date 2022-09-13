@@ -32,7 +32,7 @@ public class ReplyController {
         return new ResponseEntity<>(rno, HttpStatus.OK);
     }
 
-    @DeleteMapping({"rno"})
+    @DeleteMapping({"/{rno}"})
     public ResponseEntity<String> remove(@PathVariable("rno") Long rno) {
         replyService.remove(rno);
 

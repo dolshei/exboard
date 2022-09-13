@@ -115,7 +115,8 @@
 
             //특정한 게시글의 댓글을 처리하는 함수
             function loadJSONData() {
-                $.getJSON('/replies/board/'+bno, function(arr){
+
+                $.getJSON('/replies/board/'+[[${dto.bno}]], function(arr){
 
                     console.log(arr);
 
@@ -135,10 +136,10 @@
                     listGroup.html(str);
 
                 });
+
             }
 
             $(".replyCount").click(function(){
-
                 loadJSONData();
             })//end click
 
@@ -163,7 +164,7 @@
             $(".replySave").click(function() {
 
                 var reply = {
-                    bno: bno,
+                    bno: [[${dto.bno}]],
                     text: $('input[name="replyText"]').val(),
                     replyer: $('input[name="replyer"]').val()
                 }
@@ -232,7 +233,7 @@
 
                 var reply = {
                     rno: rno,
-                    bno: bno,
+                    bno: [[${dto.bno}]],
                     text: $('input[name="replyText"]').val(),
                     replyer: $('input[name="replyer"]').val()
                 }
@@ -258,6 +259,11 @@
 
         </script>
 
+        <div id="target">
+
+        </div>
+
+        </body>
     </th:block>
 
 </th:block>
