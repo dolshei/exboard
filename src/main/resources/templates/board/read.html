@@ -116,7 +116,9 @@
             //특정한 게시글의 댓글을 처리하는 함수
             function loadJSONData() {
 
-                $.getJSON('/replies/board/'+[[${dto.bno}]], function(arr){
+                var bno = [[${dto.bno}]];
+
+                $.getJSON('/replies/board/'+ bno, function(arr){
 
                     console.log(arr);
 
@@ -258,10 +260,6 @@
             });
 
         </script>
-
-        <div id="target">
-
-        </div>
 
         </body>
     </th:block>
